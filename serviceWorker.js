@@ -81,7 +81,7 @@ self.addEventListener('fetch', (event) => {
         )
       }).catch(() => {
         const isNotAnIcon = event.request.url.indexOf('.html') !== -1;
-        if (isNotAnIcon) return caches.match('.pages/offline.html');
+        if (isNotAnIcon) return caches.match('pages/offline.html');
       })
   );
 });
